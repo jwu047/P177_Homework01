@@ -1,1 +1,27 @@
-##Homework01
+##Your Name
+
+1. Director
+ Makoto Shinkai
+2. Producers
+ A. Noritaka Kawaguchi
+ B. Genki Kawamura
+3. Production Company
+ CoMix Wave Films
+4. Stars
+ A. Ryunosuke Kamiki
+#Taki Tachibana
+ B. Mone Kamishiraishi
+#Mitsuha Miyamizu
+ C. Masami Nagasawa
+ D. Etsuko Ichihara
+ E. Ryo Narita
+ F. Aoi Yuki
+ G. Nobunaga Shimazaki
+ H. Kaito Ishikawa
+ I. Kanon Tani
+
+
+
+from IPython.display import YoutubeVideo
+
+YoutubeVideo('hRfHcp2GjVI')
