@@ -1,27 +1,226 @@
-##Your Name
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Homework 1: Setup & Rounding Error\n",
+    "Physics 177, Spring 2017  (Prof. Tanedo)  \n",
+    "**Due**: Tuesday, April 18\n",
+    "\n",
+    "Your Name  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Discussion\n",
+    "\n",
+    "Feel free to use whatever resources you need to get up to speed with the tools (Python, Jupyter, GitHub). You are encouraged to work with other students, especially for technical set up. Please note the following:\n",
+    "* While you are free to discuss the problems, every line of code you type should be your own and *not* copied-and-pasted from anyone else. You should write your code without referring to anyone else.\n",
+    "* We will penalize plagiarism harshly.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Getting Set Up\n",
+    "\n",
+    "Set up **Python** on your system. Version 3.6 is preferred, but we shouldn't have any major problems if you're using an earlier 3.x version or 2.7.\n",
+    "\n",
+    "You are also responsible for setting up the **Jupyter** notebook (formerly iPython) environment. \n",
+    "\n",
+    "Sign up for a free **GitHub** account. The account should be associated with your UCR e-mail address. (You may also use an existing account.) All work for this course will be completed in Jupyter notebooks and submitted to GitHub. \n",
+    "- I strongly suggest that you use a professional username. Your GitHub account is a de-facto resume/CV when you apply for jobs (both academic and industry).\n",
+    "- I also suggest uploading a photo to help us learn your names.\n",
+    "\n",
+    "**Important**: send an e-mail to Prof. Tanedo and Corey Kownacki (TA). The subject of the e-mail should be *P177: Homework 1* and you should clearly indicate your GitHub username and the URL to your GitHub account. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Cloning this notebook\n",
+    "\n",
+    "Homework, like this one, will be posted to the course GitHub:  \n",
+    "https://github.com/orgs/Physics177-2017/  \n",
+    "\n",
+    "For those already familiar with GitHub, you can go ahead and fork a copy of this notebook. The instructions below are the \"round-about\" way of doing things.\n",
+    "\n",
+    "1. Download (\"clone\") this notebook to your own computer.\n",
+    "\n",
+    "2. Open your local copy of this notebook.\n",
+    "\n",
+    "3. Go to the top cell of this notebook and replace \"**Your Name**\" with your actual name. *Remark*: the anime film *Your Name* was recently released in US theaters. As of this writing, it has a 79% score on Metacritic.\n",
+    "\n",
+    "4. Save this notebook\n",
+    "\n",
+    "5. Create a new repository on GitHub called **P177_Homework01**. Initialize it with a **README.md** file, where you can briefly explain that this is Homework 1. Feel free to add any other comments in the README that you think are appropriate.\n",
+    "\n",
+    "6. Upload your local copy of this notebook to this repository. Be sure to write a brief note under **Commit changes**. Say something like \"initial upload.\"\n",
+    "\n",
+    "7. Make sure that the copy of your homework in your repository actually has your name on top. If not, troubleshoot."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. Markdown Practice\n",
+    "\n",
+    "For this problem, I'd like you **create a markdown cell** just below this one and explore the markdown syntax. Use *Insert* > *Insert Cell Below* from this cell.\n",
+    "\n",
+    "Here's one useful reference:\n",
+    "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\n",
+    "\n",
+    "I'd like you to include the following in this new cell:\n",
+    "1. Create a subheading (using two hashtags) \n",
+    "2. Create a list\n",
+    "3. Use **boldface** and *italics*\n",
+    "4. Your favorite equation, written in $\\LaTeX$\n",
+    "5. Embed a YouTube trailer of the film *Your Name*. For this you may want to refer to http://stackoverflow.com/a/27315283. "
+   ]
+  },m
+  {
+  "cell_type": "markdown",
+  "metadata": {},
+  "source": [
+   "## Your Name\n"
+   ##*_Your Name_*
 
-1. Director
- Makoto Shinkai
-2. Producers
- A. Noritaka Kawaguchi
- B. Genki Kawamura
-3. Production Company
- CoMix Wave Films
-4. Stars
- A. Ryunosuke Kamiki
-#Taki Tachibana
- B. Mone Kamishiraishi
-#Mitsuha Miyamizu
- C. Masami Nagasawa
- D. Etsuko Ichihara
- E. Ryo Narita
- F. Aoi Yuki
- G. Nobunaga Shimazaki
- H. Kaito Ishikawa
- I. Kanon Tani
+   1. **Director**
+    Makoto Shinkai
+   2. **Producers**
+    A. Noritaka Kawaguchi
+    B. Genki Kawamura
+   3. **Production Company**
+    CoMix Wave Films
+   4. **Stars**
+    A. Ryunosuke Kamiki
+   #Taki Tachibana
+    B. Mone Kamishiraishi
+   #Mitsuha Miyamizu
+    C. Masami Nagasawa
+    D. Etsuko Ichihara
+    E. Ryo Narita
+    F. Aoi Yuki
+    G. Nobunaga Shimazaki
+    H. Kaito Ishikawa
+    I. Kanon Tani
+    
+    %f(x) = x ^ 2
+    
+   from IPython.display import YouTubeVideo
+   # *_Your Name_*
+   # Video credit: TOKYOPOP TV
+   YoutubeVideo('hRfHcp2GjVI')
 
-
-
-from IPython.display import YoutubeVideo
-
-YoutubeVideo('hRfHcp2GjVI')
+  
+  
+  
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Simpson's Rule\n",
+    "In class we built a simple Riemann sum integrator. The code that we wrote together is posted here:\n",
+    "https://github.com/Physics177-2017/Lec03-Rounding-Error\n",
+    "\n",
+    "In this problem, please perform the *same* analysis on the *same* test function using **Simpson's rule**. \n",
+    "\n",
+    "What's that? Well, you'll have to read a little about it. You can find a discussion in section 5.1.2 of the course textbook (Newman, *Computational Physics*, 2nd ed.). For those who do not have a copy, you can find a discussion in Chapter 3 of Stickler's *Basic concepts in computational physics*, which is available electronically through the UCR library here: http://scotty.ucr.edu/record=b5077839~S5 (click on \"Connect to: SpringerLink\")\n",
+    "\n",
+    "Create a cell below this one and do the following:\n",
+    "1. Create an \"integrator\" function that takes in a function and a spacing, $\\Delta x$, and outputs the integral of that function from 0 .to 1 using Simpson's rule.\n",
+    "\n",
+    "2. Use the same test function that we did in lecture: $$f(x) = 3.0\\times 10^{-10} x^2.$$\n",
+    "\n",
+    "3. Find the error on your algorithm (compared to the exact result) for $\\Delta x$ of $10^{-1}, \\cdots, 10^{-7}$.\n",
+    "\n",
+    "4. Compare this to the errors that we found using the Riemann sum. Are they better? Worse? What happens as we approach the \"$10^{-16}$\" numerical precision?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Thinking about rounding errors\n",
+    "\n",
+    "In your own words, explain what's happening in the following cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "0.1+0.1+0.1 == .3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In a new cell below this one, explain why the above result is not suprising. What happens if you sum $0.1+0.1$ and compare it to $0.2$? Explain this."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## X1. [Extra Credit] \n",
+    "\n",
+    "INSPIRE is a database of papers in high-energy physics, you can find it here: http://inspirehep.net\n",
+    "\n",
+    "Write a script in Jupyter that takes a string and opens up a web browser with an INSPIRE search for that string."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
